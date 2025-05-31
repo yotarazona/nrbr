@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; margin: 0; background: white; color: #333; }
+header { background: #111; color: white; display: flex; justify-content: space-between; padding: 1rem; align-items: center; }
+nav ul { list-style: none; display: flex; margin: 0; padding: 0; }
+nav ul li { margin-left: 1rem; }
+nav ul li a { color: white; text-decoration: none; }
+main { padding: 2rem; }
+footer { text-align: center; padding: 1rem; background: #f0f0f0; margin-top: 2rem; }
