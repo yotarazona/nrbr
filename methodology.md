@@ -1,9 +1,10 @@
 ---
-layout: page
+layout: default
 title: Methodology
-permalink: /methodology/
+nav_order: 3
 ---
 
+# Methodology
 
 1. Sentinel-1 acquisition
 2. Preprocessing steps

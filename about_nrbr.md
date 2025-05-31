@@ -1,10 +1,13 @@
 ---
-layout: page
+layout: default
 title: About NRBR
-permalink: /about_nrbr/
+nav_order: 2
 ---
 
+# About NRBR
 
 NRBR is defined as:
 
-$$ NRBR = \frac{RBR_{VH} - RBR_{VV}}{RBR_{VH} + RBR_{VV}} $$
+```math
+NRBR = \frac{RBR_{VH} - RBR_{VV}}{RBR_{VH} + RBR_{VV}}
+```
