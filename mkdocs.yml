@@ -15,7 +15,7 @@ jekyll-spaceship:
 # Copyright
 copyright: Copyright &copy; 2025 Yonatan Tarazona, Vasco Mantas and Courtney Schumacher
 
-site_url: https://yotarazona.github.io/deeplearning_landcover/
+site_url: https://yotarazona.github.io/nrbr/
 
 theme:
     font:
