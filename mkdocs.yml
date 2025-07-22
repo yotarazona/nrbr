@@ -1,8 +1,19 @@
-site_name: University of Coimbra, Portugal
+site_name: Global Burn Scar Mapping with NRBR
 site_author: Yonatan T.
 
+plugins:
+  - jekyll-spaceship
+
+markdown: kramdown # Asegúrate de usar kramdown como procesador de Markdown
+
+jekyll-spaceship:
+  mathjax-processor:
+    enable: true
+    config:
+      inline-math: [ ['$','$'], ['\\(','\\)'] ]
+    
 # Copyright
-copyright: Copyright &copy; 2024 Yonatan Tarazona, Vasco Mantas and Courtney Schumacher
+copyright: Copyright &copy; 2025 Yonatan Tarazona, Vasco Mantas and Courtney Schumacher
 
 site_url: https://yotarazona.github.io/deeplearning_landcover/
 
@@ -71,7 +82,6 @@ markdown_extensions:
 
 nav:
     - Welcome: index.md
-    - 01-Downloading patches: Downloading patches.md
-    - 02-Preprocessing patches: Preprocessing patches.md
-    - 03-Training and validation: Training and validation.md
-    - 04-Predictions: Predictions.md
+    - Methodology: Methodology.md
+    - Researches: Researches.md
+    - Get Started: Get Started.md
