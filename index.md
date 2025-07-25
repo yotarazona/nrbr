@@ -1,19 +1,24 @@
-# Welcome to the tutorial: mapping burned area with Deep Learning
+# 🌍 Normalized Radar Burn Ratio: Global Burn Scar Mapping
 
-<img src="https://raw.githubusercontent.com/yotarazona/deeplearning_landcover/main/image/wildfires.jpg" align="right" width="450"/>
+<img src="https://raw.githubusercontent.com/yotarazona/nrbr/main/image/wildfires.jpg" align="right" width="350"/>
 
-## About the tutorial
+## About NRBR
 
-This tutorial is an effort to provide processing code strings for the purpose of using Deep Learning architectures for land cover disturbance mapping, combining Google Earth Engine and Google Colab. This material essentially focuses on mapping burned areas at a regional scale, so that it can be replicated for local or larger scale work.
+🔥 The **Normalized Radar Burn Ratio (NRBR)** Index is an innovative tool that maps burn scars using Sentinel-1 C-SAR data, overcoming cloud cover and smoke limitations. By fusing radar (Sentinel-1) and optical (Sentinel-2) imagery, we deliver robust, all-weather burn scars assessments for:
 
-## Wildfire
+- Global monitoring in cloud-prone regions.
+- Multi-sensor synergy: Enhanced accuracy via SAR’s penetration + optical’s spectral resolution.
+- Rapid response: Day/night detection, critical for post-fire recovery.
+- Ecosystem resilience: Data-driven restoration prioritization.
 
-Human actions are driving significant changes in land cover, intensifying climate change challenges and posing critical threats to communities and ecosystems. These changes arise from various processes and drivers, operating at different scales. It is crucial to capture these diverse processes explicitly in space and time to support scientific and societal applications that go beyond mere geographic representation of disturbances. Wildland fires offer a unique chance to study the role of abrupt land cover change, gradual recovery, and the establishment of new equilibria. Satellite remote sensing provides valuable data on fire location, magnitude, and recovery.
+🛰️ Why radar? 
 
-For future citations of this work, please use:
+While optical sensors (e.g., Sentinel-2) rely on sunlight, Sentinel-1’s C-band radar reveals structural changes in burned vegetation—rain or shine. The **NRBR** algorithm leverages this advantage, transforming raw data into actionable insights for researchers, agencies, and decision makers.
 
+🚀 Wildfires leave scars—track them with satellite intelligence.
 
-## Some Sentinel-2 burned areas patches
+🚀 Explore, contribute, or deploy locally. Turn pixels into impact!
 
-<img src="https://raw.githubusercontent.com/yotarazona/deeplearning_landcover/main/image/s2-labelingData.png" align="center" width="900"/>
-
+<div style="text-align: center;">
+<img src="https://raw.githubusercontent.com/yotarazona/nrbr/main/image/SupplementaryMaterial_S1_github.png" align="center" width="850"/>
+</div>
