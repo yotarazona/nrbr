@@ -68,60 +68,51 @@ Key Parameters:
 
 1. Depth: 4-5 encoder/decoder layers (with skip connections).
 
-2. Input: NRBR patches (512×512×1 for single-orbit; ×2 for combined ASC+DSC).
+2. Input: NRBR patches (512×512×1).
 
 3. Training:
-    - Epochs: 160 (single-orbit), 200 (combined ASC+DSC).
+    - Epochs: 200 (combined ASC+DSC).
     - Batch Size: 8.
     - Optimizer: Adam.
     - Loss: Categorical cross-entropy.
-    - Output: Binary mask (burned vs. unburned).
+    - Output: Binary mask (softmax activation).
 
 ## <a name = "step05"></a>**05. Burned area prediction**
 
+These 512×512-pixel **NRBR** patches demonstrate the effectiveness of our radar-based burned area detection system. Each patch compares: (1) the NRBR input (showing negative values for burned areas), (2) the ground truth reference data from Portuguese authoritiesthe, and (3) the U-Net model's prediction. The model, trained on ascending and descending Sentinel-1 orbits, achieves higher overall accuracy by leveraging NRBR's sensitivity to vegetation structure changes. Notably, it maintains high precision while reducing omission errors - critical for reliable fire monitoring. The consistent alignment between predictions and reference data across these samples highlights NRBR's advantage over optical methods, mainly in cloud-affected regions.
+
+### Predicting for one patch
+
+<img src="https://raw.githubusercontent.com/yotarazona/nrbr/main/image/prediction01.png" align="center" width="750"/>
+
+### Predicting for one patch
+
+<img src="https://raw.githubusercontent.com/yotarazona/nrbr/main/image/prediction02.png" align="center" width="750"/>
+
+### Predicting for one patch
+<img src="https://raw.githubusercontent.com/yotarazona/nrbr/main/image/prediction03.png" align="center" width="750"/>
+
+## Predicting on the whole Tile 1
+
+The integration of ascending and descending Sentinel-1 orbits NRBR demonstrated superior performance for burned area mapping compared to single-orbit.
+
+##### **Table 1.** Accuracy metrics comparison for NRBR using single-orbit (ASC/DSC) vs. combined Sentinel-1 acquisitions  
+| Metric               | ASC Only | DSC Only | Combined (ASC+DSC) | Improvement |
+|----------------------|----------|----------|--------------------|-------------|
+| Overall Accuracy (OA) | 0.896    | 0.894    | **0.921**          | +2.7%       |
+| Recall               | 0.812    | 0.801    | **0.858**          | +5.7%       |
+| Precision            | 0.970    | 0.978    | 0.977              | ±0.0%         |
+| IoU                  | 0.810    | 0.806    | **0.852**          | +4.6%       |
+| Omission Errors (%)  | 18.30    | 19.90    | **14.20**          | -6.0%   |
+| Commission Errors (%)| 3.40     | 2.20     | 2.30               | -1.1%       |
+| Dice Coefficient     | 88.27    | 88.12    | **91.32**          | +3.2%       |
+
+**Key Findings**:  
+1. **Combined orbits reduce omission errors** by 6.0% compared to ASC/DSC-only.  
+2. **Best balance**: Highest recall (0.858) while maintaining precision >97%.  
+3. **Optimal segmentation**: Dice=91.32 and IoU=0.852 outperform single-orbit approaches.  
 
 
-
-
-<!-- #endregion -->
-
-
-
-### 10. Predicting for one patch
-
-```python
-test_img_number = random.randint(17, len(Xtest))
-test_img = Xtest[test_img_number]
-ground_truth = y_test_argmax[test_img_number]
-test_img_input=np.expand_dims(test_img, 0)
-prediction = (model.predict(test_img_input))
-predicted_img=np.argmax(prediction, axis=3)[0,:,:]
-```
-
-```python
-# histogram with percentiles
-def hist_percentile(arr_rgb):
-  p10 = np.nanpercentile(arr_rgb, 10) # percentile10
-  p90 = np.nanpercentile(arr_rgb, 90) # percentile90
-  clipped_arr = np.clip(arr_rgb, p10, p90)
-  arr_rgb_norm = (clipped_arr - p10)/(p90 - p10)
-  return arr_rgb_norm
-
-orig_map = plt.colormaps['Greys']
-reversed_map = orig_map.reversed()
-
-fig, ax = plt.subplots(1, 3, figsize = (12,8))
-
-rgb_patch = hist_percentile(np.dstack((test_img[:,:,9], test_img[:,:,6], test_img[:,:,2])))
-ax[0].imshow(rgb_patch)
-ax[0].set_title('Sentinel-2 patch (512, 512)')
-ax[1].imshow(ground_truth, cmap = reversed_map)
-ax[1].set_title('Testing Label')
-ax[2].imshow(predicted_img, cmap = reversed_map)
-ax[2].set_title('Prediction on test image')
-plt.show()
-```
-
-<img src="https://raw.githubusercontent.com/yotarazona/deeplearning_landcover/main/image/Github_web_04.png" align="center" width="950"/>
+<img src="https://raw.githubusercontent.com/yotarazona/nrbr/main/image/whole_prediction.png" align="center" width="950"/>
 
 <!-- #endregion -->
