@@ -12,8 +12,12 @@ Welcome to the practical hub for the Normalized Radar Burn Ratio (NRBR). This pa
 
 ## Downloading NRBR
 
+The application enables global-scale downloads of the Normalized Ratio Burn Ratio (NRBR) index, along with dNBR (differenced Normalized Burn Ratio) and pre- and post-fire Landsat optical imagery. Users can easily filter data by selecting a country of interest, followed by a specific state or department, and finally choosing the 100×100 km tiles that cover the desired region. 
+
 <div style="text-align: center;">
-  <img src="https://raw.githubusercontent.com/yotarazona/deeplearning_landcover/main/image/gee_app.jpg" width="750"/>
+  <a href="https://ee-geoyons.projects.earthengine.app/view/nrbr" target="_blank">
+    <img src="https://raw.githubusercontent.com/yotarazona/deeplearning_landcover/main/image/gee_app.png" width="950"/>
+  </a>
 </div>
 
 
