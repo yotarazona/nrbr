@@ -31,5 +31,10 @@ The application enables global-scale downloads of the Normalized Ratio Burn Rati
 
 - [Deep Learning Burned area Segmentation Using Optical Sentinel-2.ipynb](https://github.com/yotarazona/scikit-eo/blob/main/examples/notebooks/18_Deep_Learning_Burned_area_Segmentation_UsingOptical.ipynb)
 
-## 🚧 **Work in Progress: more hands-on tutorials**  
-<img src="https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif" width="200" height="200"> *(Coming Soon!)* 
+**Notebook 3: U-Net for Burned Area Mapping using NRBR — Part 1: Training on Large Areas**
+
+- [DL_Unet_BA_Part1_LargeAreas_NRBR.ipynb](https://github.com/yotarazona/scikit-eo/blob/main/examples/notebooks/19_DL_Unet_BA_Part1_LargeAreas_NRBR.ipynb)
+  
+**Notebook 4: U-Net for Burned Area Mapping using NRBR — Part 2: Prediction & Mosaicking**
+
+- [DL_Unet_BA_Part2_LargeAreas_NRBR.ipynb](https://github.com/yotarazona/scikit-eo/blob/main/examples/notebooks/20_DL_Unet_BA_Part2_LargeAreas_NRBR.ipynb)
