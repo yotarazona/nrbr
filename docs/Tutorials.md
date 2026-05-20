@@ -10,6 +10,13 @@ Welcome to the practical hub for the Normalized Radar Burn Ratio (NRBR). This pa
 - ⚡ Accelerate Your Research: Use our pre-configured code examples as a template for your own analysis of fire-affected regions anywhere in the world.
 - 🔍 Promote Transparency & Reproducibility: We believe in open science. These notebooks provide the complete computational workflow behind the NRBR index, allowing for full scrutiny and adaptation.
 
+## Downloading NRBR
+
+<div style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/yotarazona/deeplearning_landcover/main/image/gee_app.jpg" width="750"/>
+</div>
+
+
 #### Tutorial Gallery
 
 **Notebook 1: Your First NRBR Map**
