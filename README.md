@@ -6,7 +6,7 @@ The study evaluates the Normalized Radar Burn Ratio (NRBR), derived from Sentine
 
 #### Reproducibility
 
-- 🛰️ **Scene identifiers:** [GEE script to list the Sentinel-1 and Sentinel-2 scenes used per tile and pre-/post-fire window]([LINK_TO_SCRIPT](https://github.com/yotarazona/nrbr/blob/main/docs/scene_ids_per_tile.ipynb)), reproducing the image counts reported in Table 1 of the manuscript.
+- 🛰️ **Scene identifiers:** [GEE script to list the Sentinel-1 and Sentinel-2 scenes used per tile and pre-/post-fire window](https://github.com/yotarazona/nrbr/blob/main/docs/scene_ids_per_tile.ipynb), reproducing the image counts reported in Table 1 of the manuscript.
 
 ---
 
